@@ -107,7 +107,7 @@ func (am *ArticleManager) GetByID(id string) (result *Article, err error) {
 
 	var key string
 	key = fmt.Sprintf("%s%s", am.articlePrefix, id)
-	Logger.Printf("%s get using key %s", _func, key)
+	//Logger.Printf("%s get using key %s", _func, key)
 
 	var byt []byte
 	byt, err = am.dbm.GetOne(am.bucket, key)
